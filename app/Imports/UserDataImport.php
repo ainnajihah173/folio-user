@@ -123,15 +123,15 @@ class UserDataImport implements ToCollection
                 'defaultDeliveryAddressTypeId' => $this->getRequired($row[27] ?? null, 'requestPreference.defaultDeliveryAddressTypeId', $rowNumber),
                 'fulfillment' => $this->getRequired($row[28] ?? null, 'requestPreference.fulfillment', $rowNumber),
             ],
-            'departments' => [$row[29] ?? null], // Single value wrapped in array
+            'departments' => [$row[29] ?? null], 
         ];
 
-        // Additional validation for email if required by the API
+        // Additional validation for email
         if (empty($user['personal']['email'])) {
             throw new \Exception("personal.email is required (row {$rowNumber})");
         }
 
-        // Validate that departments are not comma-separated
+        // Validate departments are not comma-separated
         if (strpos($user['departments'][0] ?? '', ',') !== false) {
             throw new \Exception("departments must be a single value, not comma-separated (row {$rowNumber})");
         }

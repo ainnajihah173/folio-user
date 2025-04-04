@@ -22,7 +22,7 @@
     <div class="flex-grow-1 overflow-auto bg-light">
         <div class="container-fluid h-100 px-4 py-4">
             <div class="row h-100 gx-4">
-                <!-- Left Sidebar - Fixed Width -->
+                <!-- Left Sidebar -->
                 <div class="col-lg-3 h-100 d-flex flex-column">
                     <div class="card shadow-sm border-0 rounded-3 h-100 d-flex flex-column">
                         <div class="card-header bg-primary text-white rounded-top-3">
@@ -107,7 +107,7 @@
                     </div>
                 </div>
                 
-                <!-- Main Content - Flexible Width -->
+                <!-- Main Content -->
                 <div class="col-lg-9 h-100">
                     <div class="card shadow-sm border-0 rounded-3 h-100">
                         <div class="card-header bg-success text-white rounded-top-3">
@@ -154,7 +154,7 @@
 
 @section('styles')
 <style>
-    /* Modern Font Stack */
+
     body {
         font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
         background-color: #f8f9fa;
@@ -230,18 +230,15 @@
         padding: 1rem;
     }
 
-    /* Improved Table Responsiveness */
     .table-responsive {
         min-height: 0;
         overflow-x: auto;
     }
 
-    /* Better Card Body Scrolling */
     .card-body.overflow-auto {
         max-height: calc(100vh - 200px);
     }
 
-    /* Consistent Icon Alignment */
     .bi {
         vertical-align: middle;
     }
